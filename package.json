@@ -4,7 +4,7 @@
   "description": "ScriptHero Core UI Library",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
