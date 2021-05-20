@@ -1,4 +1,4 @@
-name: @scripthero/ui
+name: '@scripthero/ui'
 
 on:
   release:
