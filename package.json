@@ -4,7 +4,9 @@
   "description": "ScriptHero Core UI Library",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -14,5 +16,63 @@
   "bugs": {
     "url": "https://github.com/ScriptHero/ui/issues"
   },
-  "homepage": "https://github.com/ScriptHero/ui#readme"
+  "homepage": "https://github.com/ScriptHero/ui#readme",
+  "dependencies": {
+    "@vanilla-extract/css": "^1.0.0",
+    "@vanilla-extract/css-utils": "^0.1.1",
+    "@vanilla-extract/sprinkles": "^0.4.2",
+    "core-js": "^3.12.1",
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@storybook/addon-actions": "^6.3.0-alpha.36",
+    "@storybook/addon-essentials": "^6.3.0-alpha.36",
+    "@storybook/addon-links": "^6.3.0-alpha.36",
+    "@storybook/builder-webpack5": "^6.3.0-alpha.36",
+    "@storybook/manager-webpack5": "^6.3.0-alpha.37",
+    "@storybook/vue3": "^6.3.0-alpha.36",
+    "@vanilla-extract/babel-plugin": "^1.0.0",
+    "@vanilla-extract/webpack-plugin": "^1.0.0",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.11",
+    "babel-loader": "^8.2.2",
+    "classnames": "^2.3.1",
+    "eslint": "^7.26.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "typescript": "^4.2.4",
+    "vue-loader": "^16.2.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
