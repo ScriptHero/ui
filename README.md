@@ -29,4 +29,21 @@ We should strive to optimize this library for developer happyness with first-cla
 
 
 ## Development / Contributing
-@TODO, but in the meantime, check out the Projects tab in github and make PRs!
+1. Clone the repo
+```shell
+  git checkout git@github.com:ScriptHero/ui.git
+  cd ui
+```
+
+2. Install dependencies
+```shell
+  yarn install
+```
+
+3. Running Storybook
+```shell
+  yarn run storybook
+```
+
+This should run storybook dev server (which has hot reloading) and is accessible at [http://localhost:6006](http://localhost:6006) 
+
