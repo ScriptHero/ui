@@ -3,6 +3,10 @@ node_modules
 /dist
 build-storybook.log
 
+# Storybook deployer files
+storybook-static
+out*
+
 # local env files
 .env.local
 .env.*.local

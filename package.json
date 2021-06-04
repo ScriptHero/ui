@@ -6,7 +6,8 @@
   "scripts": {
     "test": "exit 0",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "@storybook/addon-links": "^6.3.0-alpha.36",
     "@storybook/builder-webpack5": "^6.3.0-alpha.36",
     "@storybook/manager-webpack5": "^6.3.0-alpha.37",
+    "@storybook/storybook-deployer": "^2.8.8",
     "@storybook/vue3": "^6.3.0-alpha.36",
     "@vanilla-extract/babel-plugin": "^1.0.0",
     "@vanilla-extract/webpack-plugin": "^1.0.0",
