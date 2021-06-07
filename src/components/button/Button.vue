@@ -1,12 +1,12 @@
 <template>
-  <Box tag="button" :class="classes">
+  <Box tag="button" :class="classes" @click="onClick">
     <slot></slot>
   </Box>
 </template>
 
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, defineEmit } from 'vue'
 
 import Box from '../box/Box.vue'
 import classnames from 'classnames'
@@ -27,5 +27,10 @@ const classes = classnames(
     type === 'secondary' ? styles.outlined : undefined,
 )
 
+const emit = defineEmit(['click'])
+
+const onClick = () => {
+  emit('click')
+}
 
 </script>
