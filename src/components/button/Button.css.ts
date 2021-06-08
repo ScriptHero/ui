@@ -24,10 +24,6 @@ export const button = style({
   width: '17.5rem',
   ':active': {
     boxShadow: '0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12)',
-    ':after': {
-      backgroundSize: '100% 100%',
-      transition: 'background-size 0s'
-    }
   },
   ':focus': {
     outline: 'none',
@@ -54,15 +50,22 @@ export const button = style({
     opacity: 0,
   },
   ':active::after': {
-      backgroundSize: '100% 100%',
-      transition: 'background-size 0s'
-    }
-
+    backgroundSize: '100% 100%',
+    transition: 'background-size 0s'
+  },
+  ':disabled': {
+    color: vars.colors.primary3,
+    backgroundColor: vars.colors.gray4,
+    border: 'none',
+    boxShadow: 'none',
+    cursor: 'not-allowed',
+  }
 });
 
 export const contained = style({
   color: vars.colors.white,
   backgroundColor: vars.colors.secondary,
+  fontSize: '1.175rem',
   ':before': {
     backgroundColor: vars.colors.white,
     transition: 'opacity 0.25s'
@@ -80,6 +83,15 @@ export const outlined = style({
   border: 'solid 1px',
   borderColor: vars.colors.secondary,
   backgroundColor: 'transparent'
+})
+
+export const disabled = style({
+  ':before': {
+    opacity: 0
+  },
+  ':after': {
+    opacity: 0
+  }
 })
 
 export const icon = style({

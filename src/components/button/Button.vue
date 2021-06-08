@@ -1,5 +1,5 @@
 <template>
-  <Box tag="button" :class="classes" @click="$emit('click')">
+  <Box tag="button" :class="classes" :disabled="disabled" :title="title" @click="$emit('click')">
     <slot></slot>
   </Box>
 </template>
@@ -14,17 +14,22 @@ import * as styles from './Button.css'
 
 
 const props = defineProps<{
-  type?: 'primary' | 'secondary'
+  type?: 'primary' | 'secondary',
+  disabled?: boolean,
+  title?: string
 }>()
 
 const {
-  type = 'primary'
+  type = 'primary',
+  disabled = false,
+  title
 } = props
 
 const classes = classnames(
     styles.button,
     type === 'primary' ? styles.contained : undefined,
     type === 'secondary' ? styles.outlined : undefined,
+    disabled ? styles.disabled : undefined
 )
 
 defineEmit(['click'])
