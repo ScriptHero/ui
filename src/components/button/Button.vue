@@ -1,5 +1,5 @@
 <template>
-  <Box tag="button" :class="classes" @click="onClick">
+  <Box tag="button" :class="classes" @click="$emit('click')">
     <slot></slot>
   </Box>
 </template>
@@ -27,10 +27,6 @@ const classes = classnames(
     type === 'secondary' ? styles.outlined : undefined,
 )
 
-const emit = defineEmit(['click'])
-
-const onClick = () => {
-  emit('click')
-}
+defineEmit(['click'])
 
 </script>
