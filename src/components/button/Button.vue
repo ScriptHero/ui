@@ -1,6 +1,9 @@
 <template>
   <Box tag="button" :class="classes" :disabled="disabled" :title="title" @click="$emit('click')">
-    <slot></slot>
+    <LoadingIndicator v-if="loading"/>
+    <template v-else>
+      <slot></slot>
+    </template>
   </Box>
 </template>
 
@@ -11,17 +14,19 @@ import { defineProps, defineEmit } from 'vue'
 import Box from '../box/Box.vue'
 import classnames from 'classnames'
 import * as styles from './Button.css'
-
+import LoadingIndicator from "../loading/LoadingIndicator.vue";
 
 const props = defineProps<{
   type?: 'primary' | 'secondary',
   disabled?: boolean,
-  title?: string
+  title?: string,
+  loading?: boolean,
 }>()
 
 const {
   type = 'primary',
   disabled = false,
+  loading = false,
   title
 } = props
 

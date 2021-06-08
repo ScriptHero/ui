@@ -1,12 +1,17 @@
 import Button from './Button.vue';
 
 export default {
-  title: 'ScriptHero/Button',
+  title: 'Draft/Button',
   component: Button,
   argTypes: {
     type: { control: { type: 'radio', options: ['primary', 'secondary'] } },
-    disabled: { type: 'boolean' }
+    disabled: { type: 'boolean' },
+    loading: { type: 'boolean' },
   },
+  args: {
+    disabled: false,
+    loading: false
+  }
 };
 
 const Template = (args) => ({
@@ -36,9 +41,20 @@ Secondary.args = {
 
 export const PrimaryDisabled = Template.bind({});
 PrimaryDisabled.args = {
-  type: 'primary',
-  label: 'Disabled Button',
+  ...Primary.args,
   disabled: true,
-  title: 'Button',
 };
 
+
+export const PrimaryLoading = Template.bind({})
+PrimaryLoading.args = {
+  ...Primary.args,
+  loading: true
+}
+
+export const PrimaryLoadingDisabled = Template.bind({})
+PrimaryLoadingDisabled.args = {
+  ...Primary.args,
+  loading: true,
+  disabled: true
+}
