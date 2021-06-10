@@ -7,8 +7,7 @@
     "test": "exit 0",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
-    "chromatic": "npx chromatic --project-token=b5623f7349b2"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",

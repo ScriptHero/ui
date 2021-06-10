@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - chromatic-test
+      - master
 
 name: Publish Storybook if stories changed
 
