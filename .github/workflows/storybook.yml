@@ -1,0 +1,18 @@
+on: 
+  push:
+    branches:
+      - master
+
+name: Publish Storybook if stories changed
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Deploy Storybook to Github Pages
+      run: yarn install && yarn run deploy-storybook --ci
+      env:
+        GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

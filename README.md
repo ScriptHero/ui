@@ -48,26 +48,14 @@ We should strive to optimize this library for developer happyness with first-cla
 This should run storybook dev server (which has hot reloading) and is accessible at [http://localhost:6006](http://localhost:6006) 
 
 ## Deploying
-1. Ensure your local state is up to date with master (or that you're on master)
+[Storybook-deployer](https://github.com/storybookjs/storybook-deployer) will automatically publish any changes to [scripthero.github.io/ui/](scripthero.github.io/ui/) when anything is merged into master.
 
-2. Run [storybook-deployer](https://github.com/storybookjs/storybook-deployer)
+2. You can also run [storybook-deployer](https://github.com/storybookjs/storybook-deployer) from the command line
 ```shell
   yarn run deploy-storybook
 ```
 
-## Staging Changes
-1. Ensure your local state is up to date with master, maybe check nothing else is staged?
+## Staging Changes for UX review
+1. We use [chromatic](https://www.chromatic.com) to collaborate with UX, sign up with your github account [here](https://www.chromatic.com/start?startWithSignup=true) (be sure to grant access to ScriptHero)
 
-2. Configure your component stories title to the `Draft` directory
-```
-  export default {
-    title: 'Draft/Box',
-    component: Foo,
-    ...
-  };
-```
-
-3. Deploy it
-```shell
-  yarn run deploy-storybook
-```
+2. A new chromatic build will be automatically created everytime you push to your branch, and all PRs will be linked in the PR tab
