@@ -6,8 +6,16 @@
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
+    "skipLibCheck": true,
+    "importHelpers": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
+  "lib": [
+    "esnext",
+    "dom",
+    "dom.iterable",
+    "scripthost"
+  ],
   "include": ["src/**/*"]
 }
