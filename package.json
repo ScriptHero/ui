@@ -1,6 +1,5 @@
 {
   "name": "@scripthero/ui",
-  "private": true,
   "version": "0.0.2",
   "description": "ScriptHero Core UI Library",
   "module": "dist/ui.es.js",
@@ -8,7 +7,9 @@
     ".": "./dist/ui.es.js",
     "./style": "./dist/style.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vite build",
     "prepublish": "yarn run build",
