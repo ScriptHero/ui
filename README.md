@@ -1,5 +1,5 @@
 # ui
-Core UI Component Library
+UI Component Library and building blocks for [ScriptHero](https://www.scripthero.com) using Vue3, Vite, and [vanilla-extract](https://github.com/seek-oss/vanilla-extract).  We also use Storybook as a development and review tool via Chromatic.
 
 
 ## Proposed Goals
