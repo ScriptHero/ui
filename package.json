@@ -1,7 +1,7 @@
 {
   "name": "@scripthero/ui",
   "author": "ScriptHero",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ScriptHero Core UI Library",
   "module": "dist/ui.es.js",
   "exports": {
@@ -23,7 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/ScriptHero/ui.git"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ScriptHero/ui/issues"
   },
