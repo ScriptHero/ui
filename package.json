@@ -48,7 +48,7 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.0.11",
+    "@vue/compiler-sfc": "^3.1.4",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.9.0",
     "classnames": "^2.3.1",
@@ -62,7 +62,7 @@
   },
   "peerDependencies": {
     "core-js": "^3.12.1",
-    "vue": "^3.0.11"
+    "vue": "^3.1.4"
   },
   "resolutions": {
     "vue-loader": "^16.0.0"
